@@ -1,0 +1,87 @@
+; Tue Feb 21 10:37:43 CET 2017
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot Precio
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Edad+m%C3%ADnima+recomendada
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Tipo
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot RecomendadorApps_Class7
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Sistema+Operativo
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot Cantidad+de+descargas
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Desarrollador
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Puntuaci%C3%B3n
+		(type FLOAT)
+		(range 0.0 5.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass App
+	(is-a USER)
+	(role concrete)
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Precio
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Cantidad+de+descargas
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Edad+m%C3%ADnima+recomendada
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Sistema+Operativo
+		(type STRING)
+		(create-accessor read-write))
+	(multislot Tipo
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot Desarrollador
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Puntuaci%C3%B3n
+		(type FLOAT)
+		(range 0.0 5.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Fremium
+	(is-a App)
+	(role concrete))

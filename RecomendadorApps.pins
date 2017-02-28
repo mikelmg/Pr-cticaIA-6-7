@@ -1,0 +1,64 @@
+; Tue Feb 21 10:37:43 CET 2017
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([RecomendadorApps_Class12] of  App
+
+	(Cantidad+de+descargas 500000)
+	(Desarrollador "King")
+	(Edad+m%C3%ADnima+recomendada 7)
+	(Nombre "Candy Crush")
+	(Precio 0.0)
+	(Puntuaci%C3%B3n 4.5)
+	(Sistema+Operativo
+		"Android"
+		"IOs")
+	(Tipo "Juego"))
+
+([RecomendadorApps_Class14] of  App
+
+	(Cantidad+de+descargas 2000000)
+	(Desarrollador "Facebook")
+	(Edad+m%C3%ADnima+recomendada 12)
+	(Nombre "Instagram")
+	(Precio 0.0)
+	(Puntuaci%C3%B3n 5.0)
+	(Sistema+Operativo
+		"Android"
+		"IOs")
+	(Tipo
+		"Red Social"
+		"Fotografía"))
+
+([RecomendadorApps_Class15] of  App
+
+	(Cantidad+de+descargas 2500000)
+	(Desarrollador "Google")
+	(Edad+m%C3%ADnima+recomendada 7)
+	(Nombre "Youtube")
+	(Precio 0.0)
+	(Puntuaci%C3%B3n 4.0)
+	(Sistema+Operativo
+		"Android"
+		"IOs")
+	(Tipo
+		"Red Social"
+		"Vídeo"))
+
+([RecomendadorApps_Class19] of  App
+
+	(Cantidad+de+descargas 2250000)
+	(Desarrollador "Twitter")
+	(Edad+m%C3%ADnima+recomendada 14)
+	(Nombre "Twitter")
+	(Precio 0.0)
+	(Puntuaci%C3%B3n 5.0)
+	(Sistema+Operativo
+		"Android"
+		"IOs")
+	(Tipo "Red Social"))
+
+([RecomendadorApps_Class20] of  App
+
+	(Nombre "The New York Times"))
