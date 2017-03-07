@@ -1,63 +1,87 @@
-; Tue Feb 21 10:37:43 CET 2017
+; Tue Mar 07 10:42:35 CET 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
+([Jess+engine] of  %3AJESS-ENGINE
+)
+
+([RecomendadorApps_Class10041] of  pago
+
+	(Categoria "juegos")
+	(Edad_minima_recomendada 16)
+	(Nombre "minecraft")
+	(Sistema_operativo "5"))
+
+([RecomendadorApps_Class10042] of  freemium
+
+	(Categoria "juegos")
+	(Edad_minima_recomendada 30)
+	(Nombre "candy_crush")
+	(Sistema_operativo "4"))
+
+([RecomendadorApps_Class10043] of  gratis
+
+	(Categoria "social")
+	(Edad_minima_recomendada 25)
+	(Nombre "whatsapp")
+	(Sistema_operativo "4"))
+
 ([RecomendadorApps_Class12] of  App
 
 	(Cantidad+de+descargas 500000)
+	(Categoria "Juego")
 	(Desarrollador "King")
-	(Edad+m%C3%ADnima+recomendada 7)
+	(Edad_minima_recomendada 7)
 	(Nombre "Candy Crush")
 	(Precio 0.0)
 	(Puntuaci%C3%B3n 4.5)
-	(Sistema+Operativo
+	(Sistema_operativo
 		"Android"
-		"IOs")
-	(Tipo "Juego"))
+		"IOs"))
 
 ([RecomendadorApps_Class14] of  App
 
 	(Cantidad+de+descargas 2000000)
+	(Categoria
+		"Red Social"
+		"Fotografía")
 	(Desarrollador "Facebook")
-	(Edad+m%C3%ADnima+recomendada 12)
+	(Edad_minima_recomendada 12)
 	(Nombre "Instagram")
 	(Precio 0.0)
 	(Puntuaci%C3%B3n 5.0)
-	(Sistema+Operativo
+	(Sistema_operativo
 		"Android"
-		"IOs")
-	(Tipo
-		"Red Social"
-		"Fotografía"))
+		"IOs"))
 
 ([RecomendadorApps_Class15] of  App
 
 	(Cantidad+de+descargas 2500000)
+	(Categoria
+		"Red Social"
+		"Vídeo")
 	(Desarrollador "Google")
-	(Edad+m%C3%ADnima+recomendada 7)
+	(Edad_minima_recomendada 7)
 	(Nombre "Youtube")
 	(Precio 0.0)
 	(Puntuaci%C3%B3n 4.0)
-	(Sistema+Operativo
+	(Sistema_operativo
 		"Android"
-		"IOs")
-	(Tipo
-		"Red Social"
-		"Vídeo"))
+		"IOs"))
 
 ([RecomendadorApps_Class19] of  App
 
 	(Cantidad+de+descargas 2250000)
+	(Categoria "Red Social")
 	(Desarrollador "Twitter")
-	(Edad+m%C3%ADnima+recomendada 14)
+	(Edad_minima_recomendada 14)
 	(Nombre "Twitter")
 	(Precio 0.0)
 	(Puntuaci%C3%B3n 5.0)
-	(Sistema+Operativo
+	(Sistema_operativo
 		"Android"
-		"IOs")
-	(Tipo "Red Social"))
+		"IOs"))
 
 ([RecomendadorApps_Class20] of  App
 

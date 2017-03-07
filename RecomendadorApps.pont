@@ -1,4 +1,4 @@
-; Tue Feb 21 10:37:43 CET 2017
+; Tue Mar 07 10:42:35 CET 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,73 +7,195 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
-	(single-slot Precio
-		(type FLOAT)
-		(range 0.0 %3FVARIABLE)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Edad+m%C3%ADnima+recomendada
-		(type INTEGER)
-;+		(cardinality 0 1)
+	(multislot Categoria
+		(type STRING)
 		(create-accessor read-write))
 	(single-slot Nombre
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot Tipo
+	(single-slot Edad_minima_recomendada
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION-NAME
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3AKB-SAVE
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Desarrollador
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Puntuaci%C3%B3n
+		(type FLOAT)
+		(range 0.0 5.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Precio
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Sistema_operativo
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot %3ASTARTUP-FILE
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ASTARTUP-EXPRESSION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot RecomendadorApps_Class7
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot Sistema+Operativo
-		(type STRING)
-		(create-accessor read-write))
 	(single-slot Cantidad+de+descargas
 		(type INTEGER)
 		(range 0 %3FVARIABLE)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Desarrollador
+		(create-accessor read-write)))
+
+(defclass %3AJESS-ENGINE
+	(is-a %3ASYSTEM-CLASS)
+	(role concrete)
+	(single-slot %3ASTARTUP-FILE
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Puntuaci%C3%B3n
-		(type FLOAT)
-		(range 0.0 5.0)
+	(single-slot %3ASTARTUP-EXPRESSION
+		(type STRING)
 ;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFINITION
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3AKB-SAVE
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFGLOBAL
+	(is-a %3AJESS-DEFINITION)
+	(role concrete))
+
+(defclass %3AJESS-DEFTEMPLATE
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFFACTS
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFMESSAGE-HANDLER
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFMETHOD
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3ARULE
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-RULE
+	(is-a %3AJESS-DEFINITION %3ARULE)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AFUNCTION
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-FUNCTION
+	(is-a %3AFUNCTION %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
 		(create-accessor read-write)))
 
 (defclass App
 	(is-a USER)
 	(role concrete)
-	(single-slot Nombre
+	(multislot Categoria
 		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot Precio
 		(type FLOAT)
 		(range 0.0 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Sistema_operativo
+		(type STRING)
+		(create-accessor read-write))
 	(single-slot Cantidad+de+descargas
 		(type INTEGER)
 		(range 0 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Edad+m%C3%ADnima+recomendada
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(multislot Sistema+Operativo
-		(type STRING)
-		(create-accessor read-write))
-	(multislot Tipo
-		(type STRING)
-		(create-accessor read-write))
 	(single-slot Desarrollador
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Edad_minima_recomendada
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot Puntuaci%C3%B3n
@@ -82,6 +204,18 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
-(defclass Fremium
+(defclass freemium
+	(is-a App)
+	(role concrete))
+
+(defclass pago
+	(is-a App)
+	(role concrete))
+
+(defclass gratis
+	(is-a App)
+	(role concrete))
+
+(defclass suscripcion
 	(is-a App)
 	(role concrete))
