@@ -1,4 +1,4 @@
-; Tue Mar 07 10:42:35 CET 2017
+; Tue Mar 21 10:49:11 CET 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -8,7 +8,8 @@
 	(is-a USER)
 	(role abstract)
 	(multislot Categoria
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values viajes juego productividad noticias social fotografia)
 		(create-accessor read-write))
 	(single-slot Nombre
 		(type STRING)
@@ -29,7 +30,15 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot Desarrollador
-		(type STRING)
+		(type INSTANCE)
+;+		(allowed-classes Desarrolador)
+;+		(cardinality 1 1)
+;+		(inverse-slot Apps)
+		(create-accessor read-write))
+	(single-slot Descargas
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+		(default 0)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot Puntuaci%C3%B3n
@@ -40,10 +49,18 @@
 	(single-slot Precio
 		(type FLOAT)
 		(range 0.0 %3FVARIABLE)
+		(default 0.0)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot Sistema_operativo
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values iOS Android)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot Apps
+		(type INSTANCE)
+;+		(allowed-classes App)
+;+		(inverse-slot Desarrollador)
 		(create-accessor read-write))
 	(single-slot %3ASTARTUP-FILE
 		(type STRING)
@@ -59,11 +76,6 @@
 		(create-accessor read-write))
 	(single-slot RecomendadorApps_Class7
 		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Cantidad+de+descargas
-		(type INTEGER)
-		(range 0 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -169,33 +181,39 @@
 
 (defclass App
 	(is-a USER)
-	(role concrete)
-	(multislot Categoria
-		(type STRING)
-		(create-accessor read-write))
-	(single-slot Precio
-		(type FLOAT)
-		(range 0.0 %3FVARIABLE)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
+	(role abstract)
 	(single-slot Nombre
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot Precio
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+		(default 0.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Categoria
+		(type SYMBOL)
+		(allowed-values viajes juego productividad noticias social fotografia)
+		(create-accessor read-write))
 	(multislot Sistema_operativo
-		(type STRING)
-		(create-accessor read-write))
-	(single-slot Cantidad+de+descargas
-		(type INTEGER)
-		(range 0 %3FVARIABLE)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Desarrollador
-		(type STRING)
-;+		(cardinality 0 1)
+		(type SYMBOL)
+		(allowed-values iOS Android)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot Edad_minima_recomendada
 		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Desarrollador
+		(type INSTANCE)
+;+		(allowed-classes Desarrolador)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Descargas
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+		(default 0)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot Puntuaci%C3%B3n
@@ -206,7 +224,13 @@
 
 (defclass freemium
 	(is-a App)
-	(role concrete))
+	(role concrete)
+	(single-slot Precio
+		(type FLOAT)
+		(range 0.0 0.0)
+		(default 0.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
 
 (defclass pago
 	(is-a App)
@@ -219,3 +243,15 @@
 (defclass suscripcion
 	(is-a App)
 	(role concrete))
+
+(defclass Desarrolador
+	(is-a USER)
+	(role concrete)
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Apps
+		(type INSTANCE)
+;+		(allowed-classes App)
+		(create-accessor read-write)))
