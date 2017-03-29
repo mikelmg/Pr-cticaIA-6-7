@@ -1,4 +1,4 @@
-; Tue Mar 28 19:15:35 CEST 2017
+; Wed Mar 29 17:50:38 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -16,8 +16,9 @@
 		(allowed-values musica viajes productividad social juego noticias)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot Edad_minima_recomendada
+	(single-slot edad_recomendada
 		(type INTEGER)
+		(range 0 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3ADEFINITION-NAME
@@ -200,6 +201,11 @@
 		(allowed-values iOS Android)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
+	(single-slot edad_recomendada
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot Puntuacion
 		(type FLOAT)
 		(range 0.0 5.0)
@@ -211,10 +217,6 @@
 ;+		(allowed-classes Desarrolador)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Edad_minima_recomendada
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot Descargas
 		(type INTEGER)
 		(range 0 %3FVARIABLE)
@@ -222,7 +224,7 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass Freemium
+(defclass freemium
 	(is-a App)
 	(role concrete)
 	(single-slot Precio
@@ -232,7 +234,7 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass Gratis
+(defclass gratis
 	(is-a App)
 	(role concrete)
 	(single-slot Precio
@@ -242,7 +244,7 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass Pago
+(defclass pago
 	(is-a App)
 	(role concrete)
 	(single-slot Precio
@@ -252,7 +254,7 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass Suscripcion
+(defclass suscripcion
 	(is-a App)
 	(role concrete)
 	(single-slot Precio

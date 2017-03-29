@@ -67,7 +67,13 @@
 (deffacts apps
 	(app (id whatsapp) (categoria social) (so 4) (profit gratis) (edad 25))
 	(app (id candy_crush) (categoria juegos) (so 4) (profit freemium) (edad 30))
-	(app (id minecraft) (categoria juegos) (so 5) (profit pago) (edad 16)))
+	(app (id minecraft) (categoria juegos) (so 5) (profit pago) (edad 16))
+	(app (id amazon)(categoria compras)(so 3)(profit freemium)(edad 31))
+	(app (id telegram)(categoria social)(so 5)(profit gratis)(edad 23))
+	(app (id ebay)(categoria compras)(so 4)(profit freemium)(edad 34))
+	(app (id shazam)(categoria musica)(so 4)(profit gratis)(edad 17))
+	(app (id blablacar)(categoria viajes)(so 3)(profit freemium)(edad 39))
+	(app (id el_pais)(categoria noticias)(so 4)(profit gratis)(edad 48)))
 
 (deftemplate interes_c extends interes
     (slot valor (default 10)))
@@ -305,5 +311,6 @@
 	=>
 	(modify ?af (valor (+ ?afmount ?interes)))
 	(assert (done d_aff_mon ?usu ?appid)))
-
+	
+(reset)
 (facts)

@@ -1,4 +1,4 @@
-; Tue Mar 28 19:15:35 CEST 2017
+; Wed Mar 29 17:50:38 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,7 +11,7 @@
 	(Apps [RecomendadorApps_Class19])
 	(Nombre "Twitter"))
 
-([RecomendadorApps_Class10011] of  Suscripcion
+([RecomendadorApps_Class10011] of  suscripcion
 
 	(Categorias productividad)
 	(Desarrollador [RecomendadorApps_Class10012])
@@ -26,7 +26,7 @@
 	(Apps [RecomendadorApps_Class10011])
 	(Nombre "Adobe"))
 
-([RecomendadorApps_Class10013] of  Gratis
+([RecomendadorApps_Class10013] of  gratis
 
 	(Categorias musica)
 	(Desarrollador [RecomendadorApps_Class10014])
@@ -41,73 +41,73 @@
 	(Apps [RecomendadorApps_Class10013])
 	(Nombre "34labs"))
 
-([RecomendadorApps_Class10041] of  Pago
+([RecomendadorApps_Class10041] of  pago
 
 	(Categorias juego)
 	(Desarrollador [RecomendadorApps_Class20080])
 	(Descargas 1000000)
-	(Edad_minima_recomendada 16)
+	(edad_recomendada 16)
 	(Nombre "minecraft")
 	(Precio 6.0)
 	(Puntuacion 3.8)
 	(Sistema_operativo iOS Android))
 
-([RecomendadorApps_Class10043] of  Gratis
+([RecomendadorApps_Class10043] of  gratis
 
 	(Categorias social)
 	(Desarrollador [RecomendadorApps_Class20078])
 	(Descargas 0)
-	(Edad_minima_recomendada 25)
+	(edad_recomendada 25)
 	(Nombre "Whatsapp")
 	(Precio 0.0)
 	(Puntuacion 5.0)
 	(Sistema_operativo iOS Android))
 
-([RecomendadorApps_Class12] of  Freemium
+([RecomendadorApps_Class12] of  freemium
 
 	(Categorias juego)
 	(Desarrollador [RecomendadorApps_Class20074])
 	(Descargas 500000)
-	(Edad_minima_recomendada 7)
+	(edad_recomendada 7)
 	(Nombre "Candy_Crush")
 	(Precio 0.0)
 	(Puntuacion 4.5)
 	(Sistema_operativo Android iOS))
 
-([RecomendadorApps_Class14] of  Gratis
+([RecomendadorApps_Class14] of  gratis
 
 	(Categorias social)
 	(Desarrollador [RecomendadorApps_Class20076])
 	(Descargas 2000000)
-	(Edad_minima_recomendada 12)
+	(edad_recomendada 12)
 	(Nombre "Instagram")
 	(Precio 0.0)
 	(Puntuacion 5.0)
 	(Sistema_operativo Android iOS))
 
-([RecomendadorApps_Class15] of  Gratis
+([RecomendadorApps_Class15] of  gratis
 
 	(Categorias social)
 	(Desarrollador [RecomendadorApps_Class20079])
 	(Descargas 2500000)
-	(Edad_minima_recomendada 7)
+	(edad_recomendada 7)
 	(Nombre "Youtube")
 	(Precio 0.0)
 	(Puntuacion 4.0)
 	(Sistema_operativo Android iOS))
 
-([RecomendadorApps_Class19] of  Gratis
+([RecomendadorApps_Class19] of  gratis
 
 	(Categorias social)
 	(Desarrollador [RecomendadorApps_Class0])
 	(Descargas 2250000)
-	(Edad_minima_recomendada 14)
+	(edad_recomendada 14)
 	(Nombre "Twitter")
 	(Precio 0.0)
 	(Puntuacion 5.0)
 	(Sistema_operativo Android iOS))
 
-([RecomendadorApps_Class2] of  Suscripcion
+([RecomendadorApps_Class2] of  suscripcion
 
 	(Categorias musica)
 	(Desarrollador [RecomendadorApps_Class3])
@@ -117,7 +117,7 @@
 	(Puntuacion 3.0)
 	(Sistema_operativo iOS Android))
 
-([RecomendadorApps_Class20] of  Suscripcion
+([RecomendadorApps_Class20] of  suscripcion
 
 	(Categorias noticias)
 	(Desarrollador [RecomendadorApps_Class20081])
@@ -127,89 +127,89 @@
 	(Puntuacion 3.0)
 	(Sistema_operativo iOS Android))
 
-([RecomendadorApps_Class20059] of  Freemium
+([RecomendadorApps_Class20059] of  freemium
 
 	(Categorias juego)
 	(Desarrollador [RecomendadorApps_Class20073])
 	(Descargas 0)
-	(Edad_minima_recomendada 1)
+	(edad_recomendada 1)
 	(Nombre "dora_la_exploradora")
 	(Precio 0.0)
 	(Puntuacion 1.0)
 	(Sistema_operativo iOS Android))
 
-([RecomendadorApps_Class20060] of  Freemium
+([RecomendadorApps_Class20060] of  freemium
 
 	(Categorias juego)
 	(Desarrollador [RecomendadorApps_Class20073])
 	(Descargas 0)
-	(Edad_minima_recomendada 3)
+	(edad_recomendada 3)
 	(Nombre "Micky_Adventures")
 	(Precio 0.0)
 	(Puntuacion 2.0)
 	(Sistema_operativo Android))
 
-([RecomendadorApps_Class20061] of  Pago
+([RecomendadorApps_Class20061] of  pago
 
 	(Categorias juego)
 	(Desarrollador [RecomendadorApps_Class20073])
 	(Descargas 0)
-	(Edad_minima_recomendada 0)
+	(edad_recomendada 0)
 	(Nombre "adictolandia")
 	(Precio 10.0)
 	(Puntuacion 2.0)
 	(Sistema_operativo iOS))
 
-([RecomendadorApps_Class20062] of  Pago
+([RecomendadorApps_Class20062] of  pago
 
 	(Categorias juego)
 	(Desarrollador [RecomendadorApps_Class20072])
 	(Descargas 2000000)
-	(Edad_minima_recomendada 7)
+	(edad_recomendada 7)
 	(Nombre "Los_Sims")
 	(Precio 50.0)
 	(Puntuacion 4.0)
 	(Sistema_operativo iOS Android))
 
-([RecomendadorApps_Class20063] of  Suscripcion
+([RecomendadorApps_Class20063] of  suscripcion
 
 	(Categorias juego)
 	(Desarrollador [RecomendadorApps_Class20072])
 	(Descargas 1500000)
-	(Edad_minima_recomendada 7)
+	(edad_recomendada 7)
 	(Nombre "Star_Wars_MMO")
 	(Precio 10.0)
 	(Puntuacion 2.0)
 	(Sistema_operativo Android))
 
-([RecomendadorApps_Class20064] of  Freemium
+([RecomendadorApps_Class20064] of  freemium
 
 	(Categorias juego)
 	(Desarrollador [RecomendadorApps_Class20072])
 	(Descargas 500000)
-	(Edad_minima_recomendada 3)
+	(edad_recomendada 3)
 	(Nombre "FIFA")
 	(Precio 0.0)
 	(Puntuacion 3.0)
 	(Sistema_operativo iOS))
 
-([RecomendadorApps_Class20065] of  Gratis
+([RecomendadorApps_Class20065] of  gratis
 
 	(Categorias viajes social)
 	(Desarrollador [RecomendadorApps_Class20077])
 	(Descargas 4400000)
-	(Edad_minima_recomendada 12)
+	(edad_recomendada 12)
 	(Nombre "Traveler")
 	(Precio 0.0)
 	(Puntuacion 3.0)
 	(Sistema_operativo Android))
 
-([RecomendadorApps_Class20068] of  Freemium
+([RecomendadorApps_Class20068] of  freemium
 
 	(Categorias viajes)
 	(Desarrollador [RecomendadorApps_Class20075])
 	(Descargas 6000000)
-	(Edad_minima_recomendada 18)
+	(edad_recomendada 18)
 	(Nombre "Uber")
 	(Precio 0.0)
 	(Puntuacion 4.0)
