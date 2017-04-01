@@ -12,11 +12,11 @@
 (defrule load-app-existing-dev
 	(app (id ?id)(categoria ?cat)(profit ?profit)(edad ?edad)(so ?so)(dev ?devname))
 	?dev <- (object (is-a Desarrollador) (Nombre ?devname))
-	; Si no insertamos esta aplicación anteriormente
+	; Si no insertamos esta aplicaciÃ³n anteriormente
 	(not (object (is-a ?profit) (Nombre ?id)))
 	=>
-	(printout t "Aplicación " ?id " cargada " crlf)
-	(make-instance of ?profit 
+	(printout t "AplicaciÃ³n " ?id " cargada " crlf)
+	(make-instance of ?profit
 		(Nombre ?id)
 		(Categorias ?cat)
 		(edad_recomendada ?edad)
@@ -31,5 +31,5 @@
 	(not (test (= ?devname nil)))
 	=>
 	(make-instance of Desarrollador (Nombre ?devname)))
-	
+
 (reset)
