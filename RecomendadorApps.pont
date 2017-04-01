@@ -1,4 +1,4 @@
-; Wed Mar 29 17:50:38 CEST 2017
+; Fri Mar 31 19:21:15 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -13,7 +13,7 @@
 		(create-accessor read-write))
 	(multislot Categorias
 		(type SYMBOL)
-		(allowed-values musica viajes productividad social juego noticias)
+		(allowed-values musica viajes productividad social juegos noticias compras video)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot edad_recomendada
@@ -25,23 +25,16 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot Edad
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot %3AKB-SAVE
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 		(default FALSE)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Desarrollador
-		(type INSTANCE)
-;+		(allowed-classes Desarrolador)
-;+		(cardinality 1 1)
-;+		(inverse-slot Apps)
-		(create-accessor read-write))
-	(single-slot Descargas
-		(type INTEGER)
-		(range 0 %3FVARIABLE)
-		(default 0)
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Precio
 		(type FLOAT)
@@ -57,7 +50,7 @@
 	(multislot Apps
 		(type INSTANCE)
 ;+		(allowed-classes App)
-;+		(inverse-slot Desarrollador)
+;+		(inverse-slot desarrollador)
 		(create-accessor read-write))
 	(single-slot %3ASTARTUP-FILE
 		(type STRING)
@@ -66,6 +59,21 @@
 	(single-slot %3ASTARTUP-EXPRESSION
 		(type STRING)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot recomendaciones
+		(type INSTANCE)
+;+		(allowed-classes App freemium gratis pago suscripcion)
+		(create-accessor read-write))
+	(single-slot Genero
+		(type SYMBOL)
+		(allowed-values Mujer Hombre)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot desarrollador
+		(type INSTANCE)
+;+		(allowed-classes Desarrollador)
+;+		(cardinality 1 1)
+;+		(inverse-slot Apps)
 		(create-accessor read-write))
 	(single-slot %3ADEFINITION
 		(type STRING)
@@ -76,6 +84,20 @@
 		(range 0.0 5.0)
 		(default 2.5)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot descargas
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+		(default 0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Nacionalidad
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot RecomendadorApps_Class10001
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass %3AJESS-ENGINE
@@ -193,7 +215,7 @@
 		(create-accessor read-write))
 	(multislot Categorias
 		(type SYMBOL)
-		(allowed-values musica viajes productividad social juego noticias)
+		(allowed-values musica viajes productividad social juegos noticias compras video)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(multislot Sistema_operativo
@@ -206,21 +228,21 @@
 		(range 0 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot descargas
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+		(default 0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot desarrollador
+		(type INSTANCE)
+;+		(allowed-classes Desarrollador)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot Puntuacion
 		(type FLOAT)
 		(range 0.0 5.0)
 		(default 2.5)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot Desarrollador
-		(type INSTANCE)
-;+		(allowed-classes Desarrolador)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot Descargas
-		(type INTEGER)
-		(range 0 %3FVARIABLE)
-		(default 0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
@@ -264,7 +286,7 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass Desarrolador
+(defclass Desarrollador
 	(is-a USER)
 	(role concrete)
 	(single-slot Nombre
@@ -274,4 +296,35 @@
 	(multislot Apps
 		(type INSTANCE)
 ;+		(allowed-classes App)
+		(create-accessor read-write)))
+
+(defclass Usuario
+	(is-a USER)
+	(role concrete)
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Edad
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Sistema_operativo
+		(type SYMBOL)
+		(allowed-values iOS Android)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot recomendaciones
+		(type INSTANCE)
+;+		(allowed-classes App freemium gratis pago suscripcion)
+		(create-accessor read-write))
+	(single-slot Genero
+		(type SYMBOL)
+		(allowed-values Mujer Hombre)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Nacionalidad
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write)))

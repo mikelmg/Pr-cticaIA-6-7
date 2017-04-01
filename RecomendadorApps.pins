@@ -1,4 +1,4 @@
-; Wed Mar 29 17:50:38 CEST 2017
+; Fri Mar 31 19:21:15 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,272 +6,369 @@
 ([Jess+engine] of  %3AJESS-ENGINE
 )
 
-([RecomendadorApps_Class0] of  Desarrolador
+([RecomendadorApps_Class30735] of  Desarrollador
 
-	(Apps [RecomendadorApps_Class19])
-	(Nombre "Twitter"))
+	(Apps
+		[RecomendadorApps_Class30852]
+		[RecomendadorApps_Class30853])
+	(Nombre "Google"))
 
-([RecomendadorApps_Class10011] of  suscripcion
+([RecomendadorApps_Class30738] of  Desarrollador
 
-	(Categorias productividad)
-	(Desarrollador [RecomendadorApps_Class10012])
-	(Descargas 0)
-	(Nombre "photoshop_express")
-	(Precio 3.0)
-	(Puntuacion 2.5)
-	(Sistema_operativo Android iOS))
+	(Apps [RecomendadorApps_Class30868])
+	(Nombre "MásPúblico"))
 
-([RecomendadorApps_Class10012] of  Desarrolador
+([RecomendadorApps_Class30740] of  Desarrollador
 
-	(Apps [RecomendadorApps_Class10011])
+	(Apps [RecomendadorApps_Class30861])
+	(Nombre "Spotify"))
+
+([RecomendadorApps_Class30742] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30864])
 	(Nombre "Adobe"))
 
-([RecomendadorApps_Class10013] of  gratis
+([RecomendadorApps_Class30744] of  Desarrollador
 
-	(Categorias musica)
-	(Desarrollador [RecomendadorApps_Class10014])
-	(Descargas 300000)
-	(Nombre "radios_de_espana")
-	(Precio 0.0)
-	(Puntuacion 4.5)
-	(Sistema_operativo Android))
+	(Apps
+		[RecomendadorApps_Class30865]
+		[RecomendadorApps_Class30866])
+	(Nombre "EA"))
 
-([RecomendadorApps_Class10014] of  Desarrolador
+([RecomendadorApps_Class30747] of  Desarrollador
 
-	(Apps [RecomendadorApps_Class10013])
+	(Apps
+		[RecomendadorApps_Class30854]
+		[RecomendadorApps_Class30855]
+		[RecomendadorApps_Class30856])
+	(Nombre "Disney"))
+
+([RecomendadorApps_Class30751] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30863])
 	(Nombre "34labs"))
 
-([RecomendadorApps_Class10041] of  pago
+([RecomendadorApps_Class30753] of  Desarrollador
 
-	(Categorias juego)
-	(Desarrollador [RecomendadorApps_Class20080])
-	(Descargas 1000000)
-	(edad_recomendada 16)
-	(Nombre "minecraft")
-	(Precio 6.0)
-	(Puntuacion 3.8)
-	(Sistema_operativo iOS Android))
+	(Apps
+		[RecomendadorApps_Class30857]
+		[RecomendadorApps_Class30858])
+	(Nombre "Facebook"))
 
-([RecomendadorApps_Class10043] of  gratis
+([RecomendadorApps_Class30756] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30859])
+	(Nombre "Uber Tecnologies"))
+
+([RecomendadorApps_Class30758] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30869])
+	(Nombre "Prisa"))
+
+([RecomendadorApps_Class30760] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30872])
+	(Nombre "BlaBlaCar"))
+
+([RecomendadorApps_Class30762] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30862])
+	(Nombre "Shazam Entertainment"))
+
+([RecomendadorApps_Class30764] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30870])
+	(Nombre "eBay"))
+
+([RecomendadorApps_Class30766] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30860])
+	(Nombre "Telegram"))
+
+([RecomendadorApps_Class30768] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30873])
+	(Nombre "Amazon"))
+
+([RecomendadorApps_Class30770] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30867])
+	(Nombre "Mojang"))
+
+([RecomendadorApps_Class30772] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class30871])
+	(Nombre "King"))
+
+([RecomendadorApps_Class30852] of  gratis
+
+	(Categorias video)
+	(desarrollador [RecomendadorApps_Class30735])
+	(descargas 5779100)
+	(edad_recomendada 20)
+	(Nombre "Youtube")
+	(Precio 0.0)
+	(Puntuacion 0.0)
+	(Sistema_operativo iOS))
+
+([RecomendadorApps_Class30853] of  suscripcion
+
+	(Categorias productividad)
+	(desarrollador [RecomendadorApps_Class30735])
+	(descargas 348400)
+	(edad_recomendada 34)
+	(Nombre "Project Fi")
+	(Precio 1.0)
+	(Puntuacion 1.0)
+	(Sistema_operativo Android))
+
+([RecomendadorApps_Class30854] of  freemium
+
+	(Categorias juegos)
+	(desarrollador [RecomendadorApps_Class30747])
+	(descargas 189200)
+	(edad_recomendada 7)
+	(Nombre "Where's my Mickey")
+	(Precio 0.0)
+	(Puntuacion 5.0)
+	(Sistema_operativo Android))
+
+([RecomendadorApps_Class30855] of  freemium
+
+	(Categorias juegos)
+	(desarrollador [RecomendadorApps_Class30747])
+	(descargas 2643700)
+	(edad_recomendada 6)
+	(Nombre "Adictolandia")
+	(Precio 0.0)
+	(Puntuacion 1.0)
+	(Sistema_operativo iOS))
+
+([RecomendadorApps_Class30856] of  pago
+
+	(Categorias juegos)
+	(desarrollador [RecomendadorApps_Class30747])
+	(descargas 2761600)
+	(edad_recomendada 5)
+	(Nombre "Dora la Exploradora")
+	(Precio 1.0)
+	(Puntuacion 1.0)
+	(Sistema_operativo Android))
+
+([RecomendadorApps_Class30857] of  gratis
 
 	(Categorias social)
-	(Desarrollador [RecomendadorApps_Class20078])
-	(Descargas 0)
+	(desarrollador [RecomendadorApps_Class30753])
+	(descargas 858800)
 	(edad_recomendada 25)
 	(Nombre "Whatsapp")
 	(Precio 0.0)
-	(Puntuacion 5.0)
-	(Sistema_operativo iOS Android))
+	(Puntuacion 3.0)
+	(Sistema_operativo Android))
 
-([RecomendadorApps_Class12] of  freemium
-
-	(Categorias juego)
-	(Desarrollador [RecomendadorApps_Class20074])
-	(Descargas 500000)
-	(edad_recomendada 7)
-	(Nombre "Candy_Crush")
-	(Precio 0.0)
-	(Puntuacion 4.5)
-	(Sistema_operativo Android iOS))
-
-([RecomendadorApps_Class14] of  gratis
+([RecomendadorApps_Class30858] of  gratis
 
 	(Categorias social)
-	(Desarrollador [RecomendadorApps_Class20076])
-	(Descargas 2000000)
-	(edad_recomendada 12)
+	(desarrollador [RecomendadorApps_Class30753])
+	(descargas 5352500)
+	(edad_recomendada 18)
 	(Nombre "Instagram")
 	(Precio 0.0)
 	(Puntuacion 5.0)
-	(Sistema_operativo Android iOS))
-
-([RecomendadorApps_Class15] of  gratis
-
-	(Categorias social)
-	(Desarrollador [RecomendadorApps_Class20079])
-	(Descargas 2500000)
-	(edad_recomendada 7)
-	(Nombre "Youtube")
-	(Precio 0.0)
-	(Puntuacion 4.0)
-	(Sistema_operativo Android iOS))
-
-([RecomendadorApps_Class19] of  gratis
-
-	(Categorias social)
-	(Desarrollador [RecomendadorApps_Class0])
-	(Descargas 2250000)
-	(edad_recomendada 14)
-	(Nombre "Twitter")
-	(Precio 0.0)
-	(Puntuacion 5.0)
-	(Sistema_operativo Android iOS))
-
-([RecomendadorApps_Class2] of  suscripcion
-
-	(Categorias musica)
-	(Desarrollador [RecomendadorApps_Class3])
-	(Descargas 0)
-	(Nombre "Spotify")
-	(Precio 8.0)
-	(Puntuacion 3.0)
-	(Sistema_operativo iOS Android))
-
-([RecomendadorApps_Class20] of  suscripcion
-
-	(Categorias noticias)
-	(Desarrollador [RecomendadorApps_Class20081])
-	(Descargas 200000)
-	(Nombre "The New York Times")
-	(Precio 1.0)
-	(Puntuacion 3.0)
-	(Sistema_operativo iOS Android))
-
-([RecomendadorApps_Class20059] of  freemium
-
-	(Categorias juego)
-	(Desarrollador [RecomendadorApps_Class20073])
-	(Descargas 0)
-	(edad_recomendada 1)
-	(Nombre "dora_la_exploradora")
-	(Precio 0.0)
-	(Puntuacion 1.0)
-	(Sistema_operativo iOS Android))
-
-([RecomendadorApps_Class20060] of  freemium
-
-	(Categorias juego)
-	(Desarrollador [RecomendadorApps_Class20073])
-	(Descargas 0)
-	(edad_recomendada 3)
-	(Nombre "Micky_Adventures")
-	(Precio 0.0)
-	(Puntuacion 2.0)
-	(Sistema_operativo Android))
-
-([RecomendadorApps_Class20061] of  pago
-
-	(Categorias juego)
-	(Desarrollador [RecomendadorApps_Class20073])
-	(Descargas 0)
-	(edad_recomendada 0)
-	(Nombre "adictolandia")
-	(Precio 10.0)
-	(Puntuacion 2.0)
 	(Sistema_operativo iOS))
 
-([RecomendadorApps_Class20062] of  pago
-
-	(Categorias juego)
-	(Desarrollador [RecomendadorApps_Class20072])
-	(Descargas 2000000)
-	(edad_recomendada 7)
-	(Nombre "Los_Sims")
-	(Precio 50.0)
-	(Puntuacion 4.0)
-	(Sistema_operativo iOS Android))
-
-([RecomendadorApps_Class20063] of  suscripcion
-
-	(Categorias juego)
-	(Desarrollador [RecomendadorApps_Class20072])
-	(Descargas 1500000)
-	(edad_recomendada 7)
-	(Nombre "Star_Wars_MMO")
-	(Precio 10.0)
-	(Puntuacion 2.0)
-	(Sistema_operativo Android))
-
-([RecomendadorApps_Class20064] of  freemium
-
-	(Categorias juego)
-	(Desarrollador [RecomendadorApps_Class20072])
-	(Descargas 500000)
-	(edad_recomendada 3)
-	(Nombre "FIFA")
-	(Precio 0.0)
-	(Puntuacion 3.0)
-	(Sistema_operativo iOS))
-
-([RecomendadorApps_Class20065] of  gratis
-
-	(Categorias viajes social)
-	(Desarrollador [RecomendadorApps_Class20077])
-	(Descargas 4400000)
-	(edad_recomendada 12)
-	(Nombre "Traveler")
-	(Precio 0.0)
-	(Puntuacion 3.0)
-	(Sistema_operativo Android))
-
-([RecomendadorApps_Class20068] of  freemium
+([RecomendadorApps_Class30859] of  freemium
 
 	(Categorias viajes)
-	(Desarrollador [RecomendadorApps_Class20075])
-	(Descargas 6000000)
-	(edad_recomendada 18)
+	(desarrollador [RecomendadorApps_Class30756])
+	(descargas 2888100)
+	(edad_recomendada 32)
 	(Nombre "Uber")
 	(Precio 0.0)
 	(Puntuacion 4.0)
-	(Sistema_operativo iOS Android))
+	(Sistema_operativo iOS))
 
-([RecomendadorApps_Class20072] of  Desarrolador
+([RecomendadorApps_Class30860] of  gratis
 
-	(Apps
-		[RecomendadorApps_Class20064]
-		[RecomendadorApps_Class20062]
-		[RecomendadorApps_Class20063])
-	(Nombre "EA"))
+	(Categorias social)
+	(desarrollador [RecomendadorApps_Class30766])
+	(descargas 6042500)
+	(edad_recomendada 23)
+	(Nombre "Telegram")
+	(Precio 0.0)
+	(Puntuacion 2.0)
+	(Sistema_operativo iOS))
 
-([RecomendadorApps_Class20073] of  Desarrolador
+([RecomendadorApps_Class30861] of  suscripcion
 
-	(Apps
-		[RecomendadorApps_Class20059]
-		[RecomendadorApps_Class20060]
-		[RecomendadorApps_Class20061])
-	(Nombre "Disney"))
+	(Categorias musica)
+	(desarrollador [RecomendadorApps_Class30740])
+	(descargas 4743500)
+	(edad_recomendada 23)
+	(Nombre "Spotify")
+	(Precio 1.0)
+	(Puntuacion 5.0)
+	(Sistema_operativo Android))
 
-([RecomendadorApps_Class20074] of  Desarrolador
+([RecomendadorApps_Class30862] of  gratis
 
-	(Apps [RecomendadorApps_Class12])
-	(Nombre "King"))
+	(Categorias musica)
+	(desarrollador [RecomendadorApps_Class30762])
+	(descargas 4832200)
+	(edad_recomendada 17)
+	(Nombre "Shazam")
+	(Precio 0.0)
+	(Puntuacion 2.0)
+	(Sistema_operativo iOS))
 
-([RecomendadorApps_Class20075] of  Desarrolador
+([RecomendadorApps_Class30863] of  gratis
 
-	(Apps [RecomendadorApps_Class20068])
-	(Nombre "Uber"))
+	(Categorias musica)
+	(desarrollador [RecomendadorApps_Class30751])
+	(descargas 3203800)
+	(edad_recomendada 36)
+	(Nombre "Radios de España")
+	(Precio 0.0)
+	(Puntuacion 3.0)
+	(Sistema_operativo Android))
 
-([RecomendadorApps_Class20076] of  Desarrolador
+([RecomendadorApps_Class30864] of  suscripcion
 
-	(Apps [RecomendadorApps_Class14])
-	(Nombre "Facebook"))
+	(Categorias juegos)
+	(desarrollador [RecomendadorApps_Class30742])
+	(descargas 971300)
+	(edad_recomendada 27)
+	(Nombre "Photoshop express")
+	(Precio 1.0)
+	(Puntuacion 1.0)
+	(Sistema_operativo Android))
 
-([RecomendadorApps_Class20077] of  Desarrolador
+([RecomendadorApps_Class30865] of  pago
 
-	(Apps [RecomendadorApps_Class20065])
-	(Nombre "Facebook"))
+	(Categorias juegos)
+	(desarrollador [RecomendadorApps_Class30744])
+	(descargas 2957000)
+	(edad_recomendada 19)
+	(Nombre "Need for Speed")
+	(Precio 1.0)
+	(Puntuacion 3.0)
+	(Sistema_operativo Android))
 
-([RecomendadorApps_Class20078] of  Desarrolador
+([RecomendadorApps_Class30866] of  pago
 
-	(Apps [RecomendadorApps_Class10043])
-	(Nombre "Facebook"))
+	(Categorias juegos)
+	(desarrollador [RecomendadorApps_Class30744])
+	(descargas 5802700)
+	(edad_recomendada 27)
+	(Nombre "Los sims")
+	(Precio 1.0)
+	(Puntuacion 5.0)
+	(Sistema_operativo Android))
 
-([RecomendadorApps_Class20079] of  Desarrolador
+([RecomendadorApps_Class30867] of  pago
 
-	(Apps [RecomendadorApps_Class15])
-	(Nombre "Google"))
+	(Categorias juegos)
+	(desarrollador [RecomendadorApps_Class30770])
+	(descargas 6396800)
+	(edad_recomendada 16)
+	(Nombre "Minecraft")
+	(Precio 1.0)
+	(Puntuacion 4.0)
+	(Sistema_operativo Android))
 
-([RecomendadorApps_Class20080] of  Desarrolador
+([RecomendadorApps_Class30868] of  suscripcion
 
-	(Apps [RecomendadorApps_Class10041])
-	(Nombre "Mojang"))
+	(Categorias noticias)
+	(desarrollador [RecomendadorApps_Class30738])
+	(descargas 2280000)
+	(edad_recomendada 33)
+	(Nombre "La marea")
+	(Precio 1.0)
+	(Puntuacion 0.0)
+	(Sistema_operativo iOS))
 
-([RecomendadorApps_Class20081] of  Desarrolador
+([RecomendadorApps_Class30869] of  gratis
 
-	(Apps [RecomendadorApps_Class20])
-	(Nombre "NYT"))
+	(Categorias noticias)
+	(desarrollador [RecomendadorApps_Class30758])
+	(descargas 2844200)
+	(edad_recomendada 48)
+	(Nombre "El Pais")
+	(Precio 0.0)
+	(Puntuacion 3.0)
+	(Sistema_operativo Android))
 
-([RecomendadorApps_Class3] of  Desarrolador
+([RecomendadorApps_Class30870] of  freemium
 
-	(Apps [RecomendadorApps_Class2])
-	(Nombre "Spotify"))
+	(Categorias compras)
+	(desarrollador [RecomendadorApps_Class30764])
+	(descargas 1148100)
+	(edad_recomendada 34)
+	(Nombre "eBay")
+	(Precio 0.0)
+	(Puntuacion 3.0)
+	(Sistema_operativo Android))
+
+([RecomendadorApps_Class30871] of  freemium
+
+	(Categorias juegos)
+	(desarrollador [RecomendadorApps_Class30772])
+	(descargas 4426700)
+	(edad_recomendada 30)
+	(Nombre "Candy Crush")
+	(Precio 0.0)
+	(Puntuacion 3.0)
+	(Sistema_operativo Android))
+
+([RecomendadorApps_Class30872] of  freemium
+
+	(Categorias viajes)
+	(desarrollador [RecomendadorApps_Class30760])
+	(descargas 1568500)
+	(edad_recomendada 39)
+	(Nombre "Blablacar")
+	(Precio 0.0)
+	(Puntuacion 4.0)
+	(Sistema_operativo iOS))
+
+([RecomendadorApps_Class30873] of  freemium
+
+	(Categorias compras)
+	(desarrollador [RecomendadorApps_Class30768])
+	(descargas 679200)
+	(edad_recomendada 31)
+	(Nombre "Amazon")
+	(Precio 0.0)
+	(Puntuacion 3.0)
+	(Sistema_operativo Android))
+
+([RecomendadorApps_Class30884] of  Usuario
+
+	(Edad 22)
+	(Genero Hombre)
+	(Nacionalidad "es")
+	(Nombre "Bbasda")
+	(recomendaciones
+		[RecomendadorApps_Class30857]
+		[RecomendadorApps_Class30871]
+		[RecomendadorApps_Class30867]
+		[RecomendadorApps_Class30873]
+		[RecomendadorApps_Class30860]
+		[RecomendadorApps_Class30870]
+		[RecomendadorApps_Class30862]
+		[RecomendadorApps_Class30872]
+		[RecomendadorApps_Class30869]
+		[RecomendadorApps_Class30856]
+		[RecomendadorApps_Class30859]
+		[RecomendadorApps_Class30854]
+		[RecomendadorApps_Class30865]
+		[RecomendadorApps_Class30858]
+		[RecomendadorApps_Class30863]
+		[RecomendadorApps_Class30852]
+		[RecomendadorApps_Class30855]
+		[RecomendadorApps_Class30866]
+		[RecomendadorApps_Class30864]
+		[RecomendadorApps_Class30861]
+		[RecomendadorApps_Class30868]
+		[RecomendadorApps_Class30853])
+	(Sistema_operativo Android))

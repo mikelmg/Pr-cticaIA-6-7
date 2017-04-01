@@ -5,7 +5,7 @@
 ; ====== USUARIOS ======
 
 (deftemplate usuario
-	(slot nombre (type SYMBOL))
+	(slot nombre (type STRING))
 	(slot edad (type INTEGER))
 	(slot genero (type SYMBOL) (allowed-values h m))
 	(slot nacionalidad (type SYMBOL))
@@ -13,7 +13,7 @@
 
 ; Interes genérico
 (deftemplate interes
-    (slot sujeto (type SYMBOL))
+    (slot sujeto (type STRING))
     (slot interes (type SYMBOL))
     (slot valor (type NUMBER) (default 0)))
 
@@ -23,67 +23,89 @@
     (slot salario (type NUMBER)))
 
 (deftemplate nivel_econ
-    (slot usuario (type SYMBOL))
+    (slot usuario (type STRING))
     (slot nivel (type NUMBER) (allowed-values 0 1 2 3 4)))
 
 ; Internal use only
 (deftemplate salario_estimado
-    (slot usuario (type SYMBOL))
+    (slot usuario (type STRING))
     (slot estimacion (type NUMBER)))
 
 
 ; ====== APPS ======
 (deftemplate app
-	(slot id (type SYMBOL))
+	(slot id (type STRING))
 	(slot categoria (type SYMBOL))
 	(slot profit (type SYMBOL) (allowed-values gratis pago freemium suscripcion))
 	(slot edad (type INTEGER))
-	(slot so (type NUMBER) (default 0)))
+	(slot so (type NUMBER) (default 0))
+	(slot dev (type SYMBOL)))
 
 ; Cada usuario tiene una afinidad por cada app.
 ; De esta forma recomendamos la(s) que mayor interés le cause al usuario.
-(deftemplate afinidad extends interes)
+(deftemplate afinidad extends interes
+	(slot sujeto (type STRING))
+	(slot interes (type STRING)))
+
+; Desarrolladores 
+(deftemplate devs
+	(slot name (type STRING)))
 
 
 ; ====== FACTS ======
 
-;(deffacts usuarios
-;	(usuario (nombre manolito94) (edad 24) (genero h) (nacionalidad es) (so 6))
-;	(usuario (nombre lolHD) (edad 15) (genero h) (nacionalidad en_GB) (so 7))
-;	(usuario (nombre juani) (edad 52) (genero m) (nacionalidad es) (so 4))
-;	(usuario (nombre charstring) (edad 26) (genero m) (nacionalidad en_ZA) (so 6))
-;	(usuario (nombre maricarmen) (edad 38) (genero m) (nacionalidad ms-my) (so 4)))
+(deffacts usuarios
+	(usuario (nombre "manolito94") (edad 24) (genero h) (nacionalidad es) (so 6))
+	(usuario (nombre "lolHD") (edad 15) (genero h) (nacionalidad en_GB) (so 7))
+	(usuario (nombre "juani") (edad 52) (genero m) (nacionalidad es) (so 4))
+	(usuario (nombre "charstring") (edad 26) (genero m) (nacionalidad en_ZA) (so 6))
+	(usuario (nombre "maricarmen") (edad 38) (genero m) (nacionalidad ms-my) (so 4)))
 
 
 (deftemplate interes_cat extends interes
     (slot valor (default 20)))
 
 (deffacts intereses_categorias
-	(interes_cat (sujeto manolito94) (interes juegos))
-	(interes_cat (sujeto manolito94) (interes deportes))
-	(interes_cat (sujeto juani) (interes salud))
-	(interes_cat (sujeto lolHD) (interes juegos)))
+	(interes_cat (sujeto "manolito94") (interes juegos))
+	(interes_cat (sujeto "manolito94") (interes deportes))
+	(interes_cat (sujeto "juani") (interes salud))
+	(interes_cat (sujeto "lolHD") (interes juegos)))
 
 (deffacts apps
-	(app (id whatsapp) (categoria social) (so 4) (profit gratis) (edad 25))
-	(app (id candy_crush) (categoria juegos) (so 4) (profit freemium) (edad 30))
-	(app (id minecraft) (categoria juegos) (so 5) (profit pago) (edad 16))
-	(app (id amazon)(categoria compras)(so 3)(profit freemium)(edad 31))
-	(app (id telegram)(categoria social)(so 5)(profit gratis)(edad 23))
-	(app (id ebay)(categoria compras)(so 4)(profit freemium)(edad 34))
-	(app (id shazam)(categoria musica)(so 4)(profit gratis)(edad 17))
-	(app (id blablacar)(categoria viajes)(so 3)(profit freemium)(edad 39))
-	(app (id el_pais)(categoria noticias)(so 4)(profit gratis)(edad 48)))
+	(app (id "Whatsapp")(categoria social)(so 4)(profit gratis)(edad 25)(dev "Facebook"))
+	(app (id "Candy Crush")(categoria juegos)(so 4) (profit freemium)(edad 30)(dev "King"))
+	(app (id "Minecraft")(categoria juegos)(so 5) (profit pago)(edad 16)(dev "Mojang"))
+	(app (id "Amazon")(categoria compras)(so 3)(profit freemium)(edad 31)(dev "Amazon"))
+	(app (id "Telegram")(categoria social)(so 5)(profit gratis)(edad 23)(dev "Telegram"))
+	(app (id "eBay")(categoria compras)(so 4)(profit freemium)(edad 34)(dev "eBay"))
+	(app (id "Shazam")(categoria musica)(so 4)(profit gratis)(edad 17)(dev "Shazam Entertainment"))
+	(app (id "Blablacar")(categoria viajes)(so 3)(profit freemium)(edad 39)(dev "BlaBlaCar"))
+	(app (id "El Pais")(categoria noticias)(so 4)(profit gratis)(edad 48)(dev "Prisa"))
+	(app (id "Dora la Exploradora")(categoria juegos)(so 4)(profit pago)(edad 5)(dev "Disney"))
+	(app (id "Uber")(categoria viajes)(so 4)(profit freemium)(edad 32)(dev "Uber Tecnologies"))
+	(app (id "Where's my Mickey")(categoria juegos)(so 4)(profit freemium)(edad 7)(dev "Disney"))
+	(app (id "Need for Speed")(categoria juegos)(so 2)(profit pago)(edad 19)(dev "EA"))
+	(app (id "Instagram")(categoria social)(so 4)(profit gratis)(edad 18)(dev "Facebook"))
+	(app (id "Radios de España")(categoria musica)(so 5)(profit gratis)(edad 36)(dev "34labs"))
+	(app (id "Youtube")(categoria video)(so 5)(profit gratis)(edad 20)(dev "Google"))
+	(app (id "Adictolandia")(categoria juegos)(so 5)(profit freemium)(edad 6)(dev "Disney"))
+	(app (id "Los sims")(categoria juegos)(so 6)(profit pago)(edad 27)(dev "EA"))
+	(app (id "Photoshop express")(categoria juegos)(so 4)(profit suscripcion)(edad 27)(dev "Adobe"))
+	(app (id "Spotify")(categoria musica)(so 2)(profit suscripcion)(edad 23)(dev "Spotify"))
+	(app (id "La marea")(categoria noticias)(so 5)(profit suscripcion)(edad 33)(dev "MásPúblico"))
+	(app (id "Project Fi")(categoria productividad)(so 6)(profit suscripcion)(edad 34)(dev "Google")))
 
 (deftemplate interes_c extends interes
-    (slot valor (default 10)))
+	(slot sujeto (type SYMBOL))
+    (slot interes (type STRING))
+	(slot valor (default 10)))
 
 ; Alto uso de apps por pais
 (deffacts high_country_app_usage
-	(interes_c (sujeto en_ZA) (interes whatsapp))
-	(interes_c (sujeto ms-my) (interes whatsapp))
-	(interes_c (sujeto es) (interes instagram))
-	(interes_c (sujeto en-us) (interes twitter)))
+	(interes_c (sujeto en_ZA) (interes "Whatsapp"))
+	(interes_c (sujeto ms-my) (interes "Whatsapp"))
+	(interes_c (sujeto es)    (interes "Instagram"))
+	(interes_c (sujeto en-us) (interes "Twitter")))
 
 ; Interes de categorias por edad de usuario
 (deffacts high_age_category_usage
@@ -313,4 +335,3 @@
 	(assert (done d_aff_mon ?usu ?appid)))
 	
 (reset)
-(facts)
