@@ -1,3 +1,7 @@
+; Grupo 16
+; Germán Franco Dorca
+; Miguel Mora Gómez
+
 ; Cargar --> (batch "meta.clp")
 
 (mapclass App)
@@ -12,7 +16,7 @@
 (defrule load-app-existing-dev
 	(app (id ?id)(categoria ?cat)(profit ?profit)(edad ?edad)(so ?so)(dev ?devname))
 	?dev <- (object (is-a Desarrollador) (Nombre ?devname))
-	; Si no insertamos esta aplicación anteriormente
+	; Si no habíamos insertado esta aplicación anteriormente
 	(not (object (is-a ?profit) (Nombre ?id)))
 	=>
 	(printout t "Aplicación " ?id " cargada " crlf)
@@ -20,6 +24,7 @@
 		(Nombre ?id)
 		(Categorias ?cat)
 		(edad_recomendada ?edad)
+		; Nuestras aplicaciones jess no tienen Android-iOS, si no un número, así que lo cargamos así
 		(Sistema_operativo (if (= (mod (random) 2) 0) then Android else iOS))
 		(descargas (* 100 (random)))
 		(Puntuacion (float (mod (random) 6)))
