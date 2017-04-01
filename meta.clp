@@ -32,4 +32,39 @@
 	=>
 	(make-instance of Desarrollador (Nombre ?devname)))
 
+(defrule get-protege-user-input
+	?usuario <- (object (is-a Usuario)
+		(Nombre ?nombre)
+		(Edad ?edad)
+		(Genero ?genero)
+		(Nacionalidad ?nacionalidad))
+	=>
+	(assert (usuario
+		(nombre ?nombre)
+		(edad ?edad)
+		(genero ?genero)
+		(nacionalidad ?nacionalidad))))
+
+(defrule return-recomendaciones
+	(afinidad (sujeto ?nombre)(interes ?appname)(valor ?afinidad))
+	(app (id ?appname)(profit ?profit))
+	?usuario <- (object (is-a Usuario)
+		(Nombre ?nombre)
+		(Edad ?edad)
+		(Genero ?genero)
+		(Nacionalidad ?nacionalidad))
+	?app <- (object (is-a ?profit) (Nombre ?appname))
+	(not (done app_recommended ?appname))
+	=>
+	; TODO esperar a que termine afinidad
+	(assert (done app_recommended ?appname))
+	(printout t ?nombre " " ?appname " " ?afinidad crlf)
+	(slot-insert$ ?usuario recomendaciones 1 ?app)
+	)
+
+
+;(defrule imprimir-afinidades-only
+;	(afinidad (sujeto ?s) (interes ?app) (valor ?v))
+;	=> (printout t ?s " + " ?app " = " ?v crlf))
+
 (reset)
