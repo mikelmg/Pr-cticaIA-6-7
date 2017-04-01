@@ -65,15 +65,7 @@
 	?app <- (object (is-a ?profit)(Nombre ?appname)(Sistema_operativo ?so))
 	(not (done app_recommended ?appname))
 	=>
-	; TODO esperar a que termine afinidad
 	(assert (done app_recommended ?appname))
-	(printout t ?nombre " " ?appname " " ?afinidad crlf)
-	(slot-insert$ ?usuario recomendaciones 1 ?app)
-	)
-
-
-;(defrule imprimir-afinidades-only
-;	(afinidad (sujeto ?s) (interes ?app) (valor ?v))
-;	=> (printout t ?s " + " ?app " = " ?v crlf))
+	(slot-insert$ ?usuario recomendaciones 1 ?app))
 
 (reset)

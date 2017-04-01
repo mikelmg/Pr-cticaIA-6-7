@@ -54,12 +54,12 @@
 
 ; ====== FACTS ======
 
-(deffacts usuarios
-	(usuario (nombre "manolito94") (edad 24) (genero h) (nacionalidad es) (so 6))
-	(usuario (nombre "lolHD") (edad 15) (genero h) (nacionalidad en_GB) (so 7))
-	(usuario (nombre "juani") (edad 52) (genero m) (nacionalidad es) (so 4))
-	(usuario (nombre "charstring") (edad 26) (genero m) (nacionalidad en_ZA) (so 6))
-	(usuario (nombre "maricarmen") (edad 38) (genero m) (nacionalidad ms-my) (so 4)))
+; (deffacts usuarios
+; 	(usuario (nombre "manolito94") (edad 24) (genero h) (nacionalidad es) (so 6))
+; 	(usuario (nombre "lolHD") (edad 15) (genero h) (nacionalidad en_GB) (so 7))
+; 	(usuario (nombre "juani") (edad 52) (genero m) (nacionalidad es) (so 4))
+; 	(usuario (nombre "charstring") (edad 26) (genero m) (nacionalidad en_ZA) (so 6))
+; 	(usuario (nombre "maricarmen") (edad 38) (genero m) (nacionalidad ms-my) (so 4)))
 
 
 (deftemplate interes_cat extends interes
@@ -334,5 +334,5 @@
 	(modify ?af (valor (+ ?afmount ?interes)))
 	(assert (done d_aff_mon ?usu ?appid)))
 
+
 (reset)
-(run)

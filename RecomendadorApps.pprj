@@ -1,4 +1,4 @@
-; Fri Mar 31 19:21:15 CEST 2017
+; Sat Apr 01 14:12:54 CDT 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -21,16 +21,16 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[RecomendadorApps_ProjectKB_Class30023]
-		[RecomendadorApps_ProjectKB_Class30024]
-		[RecomendadorApps_ProjectKB_Class30025]
-		[RecomendadorApps_ProjectKB_Class30026]
-		[RecomendadorApps_ProjectKB_Class30027]
-		[RecomendadorApps_ProjectKB_Class30028]
-		[RecomendadorApps_ProjectKB_Class30029]
-		[RecomendadorApps_ProjectKB_Class30030]
-		[RecomendadorApps_ProjectKB_Class30031]
-		[RecomendadorApps_ProjectKB_Class30032]))
+		[RecomendadorApps_ProjectKB_Class30144]
+		[RecomendadorApps_ProjectKB_Class30145]
+		[RecomendadorApps_ProjectKB_Class30146]
+		[RecomendadorApps_ProjectKB_Class30147]
+		[RecomendadorApps_ProjectKB_Class30148]
+		[RecomendadorApps_ProjectKB_Class30149]
+		[RecomendadorApps_ProjectKB_Class30150]
+		[RecomendadorApps_ProjectKB_Class30151]
+		[RecomendadorApps_ProjectKB_Class30152]
+		[RecomendadorApps_ProjectKB_Class30153]))
 
 ([CLSES_TAB] of  Widget
 
@@ -83,11 +83,11 @@
 ([KB_011596_Class1] of  Map
 
 	(entries
-		[RecomendadorApps_ProjectKB_Class30033]
-		[RecomendadorApps_ProjectKB_Class30034]
-		[RecomendadorApps_ProjectKB_Class30036]
-		[RecomendadorApps_ProjectKB_Class30037])
-	(referenced_maps [RecomendadorApps_ProjectKB_Class30035]))
+		[RecomendadorApps_ProjectKB_Class30154]
+		[RecomendadorApps_ProjectKB_Class30155]
+		[RecomendadorApps_ProjectKB_Class30157]
+		[RecomendadorApps_ProjectKB_Class30158])
+	(referenced_maps [RecomendadorApps_ProjectKB_Class30156]))
 
 ([KB_011596_Class100] of  String
 
@@ -181,7 +181,7 @@
 	(name "classes_file_name")
 	(string_value "RecomendadorApps.pont"))
 
-([KB_724348_Class5] of  Map
+([KB_046226_Class5] of  Map
 )
 
 ([LAYOUT_PROPERTIES] of  Property_List
@@ -397,7 +397,7 @@
 ([RecomendadorApps_ProjectKB_Class101] of  String
 
 	(name "SearchTab_Query")
-	(string_value "Query Name: Consulta 1\nMatch All:true\nLength: 1\ngratis	Puntuacion	is	Other:5	1	\n\nQuery Name: Consulta 2\nMatch All:true\nLength: 3\nApp	Precio	is less than	Other:5	1	\nApp	desarrollador	contains	Query:Desarrolladores con el nombre \"Disney\"|Desarrolladores con el nombre \"Disney\"	1	\nApp	edad_recomendada	is less than	Other:18	1	\n\nQuery Name: Consulta 3\nMatch All:true\nLength: 3\nApp	Categorias	is	Other:juegos	1	\nApp	desarrollador	contains	Query:Desarrolladores con nombre \"EA\"|Desarrolladores con nombre \"EA\"	1	\nApp	descargas	is greater than	Other:1000000	1	\n\nQuery Name: Apps de viajes para iOS\nMatch All:true\nLength: 2\nApp	Categorias	is	Other:viajes	1	\nApp	Sistema_operativo	is	Other:iOS	1	\n\nQuery Name: Consulta 4\nMatch All:true\nLength: 2\nDesarrollador	Apps	contains	Query:Apps de viajes para iOS|Apps de viajes para iOS	1	\nDesarrollador	Apps	does not contain	Query:Apps para Android|Apps para Android	1	\n\nQuery Name: Apps de suscripcion de musica baratas\nMatch All:true\nLength: 2\nsuscripcion	Precio	is less than	Other:10	1	\nsuscripcion	Categorias	is	Other:musica	1	\n\nQuery Name: Desarrolladores con el nombre \"Disney\"\nMatch All:true\nLength: 1\nDesarrollador	Nombre	is	Other:Disney	1	\n\nQuery Name: Desarrolladores con nombre \"EA\"\nMatch All:true\nLength: 1\nDesarrollador	Nombre	is	Other:EA	1	\n\nQuery Name: Apps para Android\nMatch All:true\nLength: 1\nApp	Sistema_operativo	is	Other:Android	1	\n\n"))
+	(string_value "Query Name: Consulta 1 - Apps de puntuación 5\nMatch All:true\nLength: 1\ngratis	Puntuacion	is	Other:5	1	\n\nQuery Name: Consulta 2 - Apps de disney de menos de 5€ para niiños\nMatch All:true\nLength: 3\nApp	Precio	is less than	Other:5	1	\nApp	desarrollador	contains	Query:Desarrolladores con el nombre \"Disney\"|Desarrolladores con el nombre \"Disney\"	1	\nApp	edad_recomendada	is less than	Other:18	1	\n\nQuery Name: Consulta 3 - Juegos de EA con más de 1M de descargas\nMatch All:true\nLength: 3\nApp	Categorias	is	Other:juegos	1	\nApp	desarrollador	contains	Query:Desarrolladores con nombre \"EA\"|Desarrolladores con nombre \"EA\"	1	\nApp	descargas	is greater than	Other:1000000	1	\n\nQuery Name: Apps de viajes para iOS\nMatch All:true\nLength: 2\nApp	Categorias	is	Other:viajes	1	\nApp	Sistema_operativo	is	Other:iOS	1	\n\nQuery Name: Consulta 4 - Desarrolladores que tienen apps de viajes sólo para iOS\nMatch All:true\nLength: 2\nDesarrollador	Apps	contains	Query:Apps de viajes para iOS|Apps de viajes para iOS	1	\nDesarrollador	Apps	does not contain	Query:Apps de viajes para Android|Apps de viajes para Android	1	\n\nQuery Name: Consulta 6 extra - Apps de suscripcion de musica baratas\nMatch All:true\nLength: 2\nsuscripcion	Precio	is less than	Other:5	1	\nsuscripcion	Categorias	is	Other:musica	1	\n\nQuery Name: Desarrolladores con el nombre \"Disney\"\nMatch All:true\nLength: 1\nDesarrollador	Nombre	is	Other:Disney	1	\n\nQuery Name: Desarrolladores con nombre \"EA\"\nMatch All:true\nLength: 1\nDesarrollador	Nombre	is	Other:EA	1	\n\nQuery Name: Apps de viajes para Android\nMatch All:true\nLength: 2\nApp	Sistema_operativo	is	Other:Android	1	\nApp	Categorias	is	Other:viajes	1	\n\nQuery Name: Consulta 5 extra - Otras apps populares de los desarrolladores de apps de viajes para iOS\nMatch All:true\nLength: 2\nApp	desarrollador	contains	Query:Consulta 4 - Desarrolladores que tienen apps de viajes sólo para iOS|Consulta 4 - Desarrolladores que tienen apps de viajes sólo para iOS	1	\nApp	descargas	is greater than	Other:100000	1	\n\n"))
 
 ([RecomendadorApps_ProjectKB_Class10101] of  Widget
 
@@ -1116,81 +1116,81 @@
 ([RecomendadorApps_ProjectKB_Class30] of  Property_List
 )
 
-([RecomendadorApps_ProjectKB_Class30023] of  String
+([RecomendadorApps_ProjectKB_Class30144] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([RecomendadorApps_ProjectKB_Class30024] of  String
+([RecomendadorApps_ProjectKB_Class30145] of  String
 
 	(name "Usuario")
 	(string_value "Nombre"))
 
-([RecomendadorApps_ProjectKB_Class30025] of  String
+([RecomendadorApps_ProjectKB_Class30146] of  String
 
 	(name ":FUNCTION")
 	(string_value "%3ADEFINITION-NAME"))
 
-([RecomendadorApps_ProjectKB_Class30026] of  String
+([RecomendadorApps_ProjectKB_Class30147] of  String
 
 	(name ":RULE")
 	(string_value "%3ADEFINITION-NAME"))
 
-([RecomendadorApps_ProjectKB_Class30027] of  String
+([RecomendadorApps_ProjectKB_Class30148] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([RecomendadorApps_ProjectKB_Class30028] of  String
+([RecomendadorApps_ProjectKB_Class30149] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([RecomendadorApps_ProjectKB_Class30029] of  String
+([RecomendadorApps_ProjectKB_Class30150] of  String
 
 	(name "freemium")
 	(string_value "Nombre"))
 
-([RecomendadorApps_ProjectKB_Class30030] of  String
+([RecomendadorApps_ProjectKB_Class30151] of  String
 
 	(name "Desarrollador")
 	(string_value "Nombre"))
 
-([RecomendadorApps_ProjectKB_Class30031] of  String
+([RecomendadorApps_ProjectKB_Class30152] of  String
 
 	(name "App")
 	(string_value "Nombre"))
 
-([RecomendadorApps_ProjectKB_Class30032] of  String
+([RecomendadorApps_ProjectKB_Class30153] of  String
 
 	(name ":JESS-DEFINITION")
 	(string_value "%3ADEFINITION-NAME"))
 
-([RecomendadorApps_ProjectKB_Class30033] of  Map_Entry
+([RecomendadorApps_ProjectKB_Class30154] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([RecomendadorApps_ProjectKB_Class30034] of  Map_Entry
+([RecomendadorApps_ProjectKB_Class30155] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([RecomendadorApps_ProjectKB_Class30035] of  Map
+([RecomendadorApps_ProjectKB_Class30156] of  Map
 )
 
-([RecomendadorApps_ProjectKB_Class30036] of  Map_Entry
+([RecomendadorApps_ProjectKB_Class30157] of  Map_Entry
 
 	(key "InstanceDisplay.yellow_stickies")
 	(key_class "java.lang.String")
-	(value "RecomendadorApps_ProjectKB_Class30035")
+	(value "RecomendadorApps_ProjectKB_Class30156")
 	(value_class "java.util.Map"))
 
-([RecomendadorApps_ProjectKB_Class30037] of  Map_Entry
+([RecomendadorApps_ProjectKB_Class30158] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
