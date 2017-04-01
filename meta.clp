@@ -24,7 +24,8 @@
 		(Nombre ?id)
 		(Categorias ?cat)
 		(edad_recomendada ?edad)
-		; Nuestras aplicaciones jess no tienen Android-iOS, si no un número, así que lo cargamos así
+		; Nuestras aplicaciones jess no tienen SO si no versión de Android,
+		; así que lo cargamos así para que haya algo de variedad
 		(Sistema_operativo (if (= (mod (random) 2) 0) then Android else iOS))
 		(descargas (* 100 (random)))
 		(Puntuacion (float (mod (random) 6)))
@@ -57,8 +58,9 @@
 		(Nombre ?nombre)
 		(Edad ?edad)
 		(Genero ?genero)
-		(Nacionalidad ?nacionalidad))
-	?app <- (object (is-a ?profit) (Nombre ?appname))
+		(Nacionalidad ?nacionalidad)
+		(Sistema_operativo ?so))
+	?app <- (object (is-a ?profit)(Nombre ?appname)(Sistema_operativo ?so))
 	(not (done app_recommended ?appname))
 	=>
 	; TODO esperar a que termine afinidad
