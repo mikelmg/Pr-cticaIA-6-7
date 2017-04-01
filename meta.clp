@@ -44,7 +44,9 @@
 		(Edad ?edad)
 		(Genero ?genero)
 		(Nacionalidad ?nacionalidad))
+	(not (usuario (nombre ?nombre)))
 	=>
+	(printout t "Cargado usuario " ?nombre crlf)
 	(assert (usuario
 		(nombre ?nombre)
 		(edad ?edad)
