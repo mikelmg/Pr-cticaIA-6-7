@@ -13,6 +13,7 @@
 (mapclass Desarrollador)
 (mapclass Usuario)
 
+; Carga aplicaciones Jess a Protégé
 (defrule load-app-existing-dev
 	(app (id ?id)(categoria ?cat)(profit ?profit)(edad ?edad)(so ?so)(dev ?devname))
 	?dev <- (object (is-a Desarrollador) (Nombre ?devname))
@@ -31,6 +32,7 @@
 		(Puntuacion (float (mod (random) 6)))
 		(desarrollador ?dev)))
 
+; Crea instancias de Desarrollador en Protégé a partir del nombre en la app Jess
 (defrule create-non-existing-dev
 	?app <-(app (dev ?devname))
 	(not (object (is-a Desarrollador) (Nombre ?devname)))
@@ -38,21 +40,25 @@
 	=>
 	(make-instance of Desarrollador (Nombre ?devname)))
 
+; Carga a Jess un usuario Protégé para poder empezar la recomendación
 (defrule get-protege-user-input
 	?usuario <- (object (is-a Usuario)
 		(Nombre ?nombre)
 		(Edad ?edad)
 		(Genero ?genero)
-		(Nacionalidad ?nacionalidad))
+		(Nacionalidad ?nacionalidad)
+		(Categorias ?interes_categoria))
 	(not (usuario (nombre ?nombre)))
 	=>
 	(printout t "Cargado usuario " ?nombre crlf)
 	(assert (usuario
 		(nombre ?nombre)
 		(edad ?edad)
-		(genero ?genero)
-		(nacionalidad ?nacionalidad))))
+		(genero (if (= ?genero hombre) then h else m))
+		(nacionalidad ?nacionalidad)))
+	(assert (interes_cat (sujeto ?nombre)(interes ?interes_categoria))))
 
+; Carga en un slot del usuario Protégé las recomendaciones hechas en Jess
 (defrule return-recomendaciones
 	(afinidad (sujeto ?nombre)(interes ?appname)(valor ?afinidad))
 	(app (id ?appname)(profit ?profit))

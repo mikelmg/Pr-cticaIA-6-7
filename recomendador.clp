@@ -18,8 +18,8 @@
 	(slot valor (type NUMBER) (default 0)))
 
 (deftemplate salario_edad
-	(slot edad_min (type NUMBER))
-	(slot edad_max (type NUMBER))
+	(slot edad_min (type INTEGER))
+	(slot edad_max (type INTEGER))
 	(slot salario (type NUMBER)))
 
 (deftemplate nivel_econ
@@ -65,11 +65,11 @@
 (deftemplate interes_cat extends interes
 	(slot valor (default 20)))
 
-(deffacts intereses_categorias
-	(interes_cat (sujeto "manolito94") (interes juegos))
-	(interes_cat (sujeto "manolito94") (interes deportes))
-	(interes_cat (sujeto "juani") (interes salud))
-	(interes_cat (sujeto "lolHD") (interes juegos)))
+; (deffacts intereses_categorias
+; 	(interes_cat (sujeto "manolito94") (interes juegos))
+; 	(interes_cat (sujeto "manolito94") (interes deportes))
+; 	(interes_cat (sujeto "juani") (interes salud))
+; 	(interes_cat (sujeto "lolHD") (interes juegos)))
 
 (deffacts apps
 	(app (id "Whatsapp")(categoria social)(so 4)(profit gratis)(edad 25)(dev "Facebook"))
@@ -93,7 +93,8 @@
 	(app (id "Photoshop express")(categoria juegos)(so 4)(profit suscripcion)(edad 27)(dev "Adobe"))
 	(app (id "Spotify")(categoria musica)(so 2)(profit suscripcion)(edad 23)(dev "Spotify"))
 	(app (id "La marea")(categoria noticias)(so 5)(profit suscripcion)(edad 33)(dev "MásPúblico"))
-	(app (id "Project Fi")(categoria productividad)(so 6)(profit suscripcion)(edad 34)(dev "Google")))
+	(app (id "Project Fi")(categoria productividad)(so 6)(profit suscripcion)(edad 34)(dev "Google"))
+	(app (id "Twitter")(categoria social)(so 2)(profit gratis)(edad 25)(dev "Twitter Inc")))
 
 (deftemplate interes_c extends interes
 	(slot sujeto (type SYMBOL))
@@ -105,6 +106,7 @@
 	(interes_c (sujeto en_ZA) (interes "Whatsapp"))
 	(interes_c (sujeto ms-my) (interes "Whatsapp"))
 	(interes_c (sujeto es)    (interes "Instagram"))
+	(interes_c (sujeto es)    (interes "Twitter"))
 	(interes_c (sujeto en-us) (interes "Twitter")))
 
 ; Interes de categorias por edad de usuario
@@ -113,7 +115,9 @@
 	(hausage 10 25 juegos)
 	(hausage 35 44 social)
 	(hausage 40 50 libros)
-	(hausage 18 26 compras))
+	(hausage 18 26 compras)
+	(hausage 34 46 viajes)
+	(hausage 36 58 noticias))
 
 (deftemplate afinidad_mon extends interes
 	(slot sujeto (type NUMBER) (allowed-values 0 1 2 3 4))
@@ -283,7 +287,7 @@
 ; Socioeconomic level assignment based on the estimated salary
 (defrule asig_nivel_socioeconomico_0
 	?estimacion <- (salario_estimado (usuario ?usuario) (estimacion ?salario))
-	(test (< ?salario 700))
+	(test (<= ?salario 700))
 	=>
 	(retract ?estimacion)
 	(assert (nivel_econ (usuario ?usuario) (nivel 0))))
@@ -291,7 +295,7 @@
 (defrule asig_nivel_socioeconomico_1
 	?estimacion <- (salario_estimado (usuario ?usuario) (estimacion ?salario))
 	(test (> ?salario 700))
-	(test (< ?salario 1500))
+	(test (<= ?salario 1500))
 	=>
 	(retract ?estimacion)
 	(assert (nivel_econ (usuario ?usuario) (nivel 1))))
@@ -299,7 +303,7 @@
 (defrule asig_nivel_socioeconomico_2
 	?estimacion <- (salario_estimado (usuario ?usuario) (estimacion ?salario))
 	(test (> ?salario 1500))
-	(test (< ?salario 2200))
+	(test (<= ?salario 2200))
 	=>
 	(retract ?estimacion)
 	(assert (nivel_econ (usuario ?usuario) (nivel 2))))
@@ -307,7 +311,7 @@
 (defrule asig_nivel_socioeconomico_3
 	?estimacion <- (salario_estimado (usuario ?usuario) (estimacion ?salario))
 	(test (> ?salario 2200))
-	(test (< ?salario 3000))
+	(test (<= ?salario 3000))
 	=>
 	(retract ?estimacion)
 	(assert (nivel_econ (usuario ?usuario) (nivel 3))))
