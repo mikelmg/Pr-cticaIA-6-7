@@ -12,15 +12,16 @@
 
 (mapclass Desarrollador)
 (mapclass Usuario)
+(mapclass Recomendacion)
 
 ; Carga aplicaciones Jess a Protégé
-(defrule load-app-existing-dev
+(defrule load-app
 	(app (id ?id)(categoria ?cat)(profit ?profit)(edad ?edad)(so ?so)(dev ?devname))
 	?dev <- (object (is-a Desarrollador) (Nombre ?devname))
 	; Si no habíamos insertado esta aplicación anteriormente
 	(not (object (is-a ?profit) (Nombre ?id)))
 	=>
-	(printout t "Aplicación " ?id " cargada " crlf)
+	(printout t "Cargada aplicación " ?id crlf)
 	(make-instance of ?profit
 		(Nombre ?id)
 		(Categorias ?cat)
@@ -58,20 +59,29 @@
 		(nacionalidad ?nacionalidad)))
 	(assert (interes_cat (sujeto ?nombre)(interes ?interes_categoria))))
 
-; Carga en un slot del usuario Protégé las recomendaciones hechas en Jess
-(defrule return-recomendaciones
+; Covierte las afinidades Jess en Recomendaciones Protégé
+(defrule convertir-afinidad
 	(afinidad (sujeto ?nombre)(interes ?appname)(valor ?afinidad))
+	(object (OBJECT ?usuario)(is-a Usuario)(Nombre ?nombre))
 	(app (id ?appname)(profit ?profit))
-	?usuario <- (object (is-a Usuario)
-		(Nombre ?nombre)
-		(Edad ?edad)
-		(Genero ?genero)
-		(Nacionalidad ?nacionalidad)
-		(Sistema_operativo ?so))
-	?app <- (object (is-a ?profit)(Nombre ?appname)(Sistema_operativo ?so))
-	(not (done app_recommended ?nombre ?appname))
+	(object (OBJECT ?app)(is-a ?profit)(Nombre ?appname))
+	(not (object (is-a Recomendacion)(app_recomendada ?app)(recomendada_a ?usuario)))
+	(test (> ?afinidad 0))
 	=>
-	(assert (done app_recommended ?nombre ?appname))
-	(slot-insert$ ?usuario recomendaciones 1 ?app))
+	(make-instance of Recomendacion
+		(app_recomendada ?app)
+		(recomendada_a ?usuario)
+		(afinidad ?afinidad)))
+
+; Actualiza las recomendaciones en Protéǵé cuando se actualizan en Jess
+(defrule actualizar-afinidad
+	(afinidad (sujeto ?nombre)(interes ?appname)(valor ?afinidad))
+	(object (OBJECT ?usuario)(is-a Usuario)(Nombre ?nombre))
+	(app (id ?appname)(profit ?profit))
+	(object (OBJECT ?app)(is-a ?profit)(Nombre ?appname))
+	?recomendacion <- (object (is-a Recomendacion)(app_recomendada ?app)(recomendada_a ?usuario)(afinidad ?old_afinidad))
+	(test (not (= ?afinidad ?old_afinidad))) ; Controla bucles infinitos
+	=>
+	(slot-set ?recomendacion afinidad ?afinidad))
 
 (reset)

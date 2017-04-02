@@ -1,4 +1,4 @@
-; Sun Apr 02 20:21:53 CEST 2017
+; Mon Apr 03 00:30:48 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -21,16 +21,17 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[RecomendadorApps_ProjectKB_Class30168]
-		[RecomendadorApps_ProjectKB_Class30169]
-		[RecomendadorApps_ProjectKB_Class30170]
-		[RecomendadorApps_ProjectKB_Class30171]
-		[RecomendadorApps_ProjectKB_Class30172]
-		[RecomendadorApps_ProjectKB_Class30173]
-		[RecomendadorApps_ProjectKB_Class30174]
-		[RecomendadorApps_ProjectKB_Class30175]
-		[RecomendadorApps_ProjectKB_Class30176]
-		[RecomendadorApps_ProjectKB_Class30177]))
+		[RecomendadorApps_ProjectKB_Class50114]
+		[RecomendadorApps_ProjectKB_Class50115]
+		[RecomendadorApps_ProjectKB_Class50116]
+		[RecomendadorApps_ProjectKB_Class50117]
+		[RecomendadorApps_ProjectKB_Class50118]
+		[RecomendadorApps_ProjectKB_Class50119]
+		[RecomendadorApps_ProjectKB_Class50120]
+		[RecomendadorApps_ProjectKB_Class50121]
+		[RecomendadorApps_ProjectKB_Class50122]
+		[RecomendadorApps_ProjectKB_Class50123]
+		[RecomendadorApps_ProjectKB_Class50124]))
 
 ([CLSES_TAB] of  Widget
 
@@ -83,11 +84,11 @@
 ([KB_011596_Class1] of  Map
 
 	(entries
-		[RecomendadorApps_ProjectKB_Class30178]
-		[RecomendadorApps_ProjectKB_Class30179]
-		[RecomendadorApps_ProjectKB_Class30181]
-		[RecomendadorApps_ProjectKB_Class30182])
-	(referenced_maps [RecomendadorApps_ProjectKB_Class30180]))
+		[RecomendadorApps_ProjectKB_Class50125]
+		[RecomendadorApps_ProjectKB_Class50126]
+		[RecomendadorApps_ProjectKB_Class50128]
+		[RecomendadorApps_ProjectKB_Class50129])
+	(referenced_maps [RecomendadorApps_ProjectKB_Class50127]))
 
 ([KB_011596_Class100] of  String
 
@@ -181,7 +182,7 @@
 	(name "classes_file_name")
 	(string_value "RecomendadorApps.pont"))
 
-([KB_558305_Class5] of  Map
+([KB_189333_Class5] of  Map
 )
 
 ([LAYOUT_PROPERTIES] of  Property_List
@@ -276,11 +277,12 @@
 		[RecomendadorApps_ProjectKB_Class10147]
 		[STANDARD_CLASS_FORM_WIDGET]
 		[RecomendadorApps_ProjectKB_Class88]
+		[RecomendadorApps_ProjectKB_Class20006]
 		[RecomendadorApps_ProjectKB_Class10109]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[RecomendadorApps_ProjectKB_Class10189]
-		[STANDARD_SLOT_FORM_WIDGET]
 		[RecomendadorApps_ProjectKB_Class10210]
+		[STANDARD_SLOT_FORM_WIDGET]
 		[RecomendadorApps_ProjectKB_Class105])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
@@ -370,7 +372,8 @@
 		[RecomendadorApps_ProjectKB_Class30043]
 		[RecomendadorApps_ProjectKB_Class30049]
 		[RecomendadorApps_ProjectKB_Class30051]
-		[RecomendadorApps_ProjectKB_Class30164]))
+		[RecomendadorApps_ProjectKB_Class30164]
+		[RecomendadorApps_ProjectKB_Class40058]))
 
 ([RecomendadorApps_ProjectKB_Class10009] of  Widget
 
@@ -1056,6 +1059,93 @@
 ([RecomendadorApps_ProjectKB_Class20] of  Property_List
 )
 
+([RecomendadorApps_ProjectKB_Class20006] of  Widget
+
+	(is_hidden FALSE)
+	(name "Recomendacion")
+	(property_list [RecomendadorApps_ProjectKB_Class20007])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([RecomendadorApps_ProjectKB_Class20007] of  Property_List
+
+	(properties
+		[RecomendadorApps_ProjectKB_Class20008]
+		[RecomendadorApps_ProjectKB_Class20009]
+		[RecomendadorApps_ProjectKB_Class20011]
+		[RecomendadorApps_ProjectKB_Class20015]))
+
+([RecomendadorApps_ProjectKB_Class20008] of  Property_List
+
+	(name "layout properties"))
+
+([RecomendadorApps_ProjectKB_Class20009] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "afinidad")
+	(property_list [RecomendadorApps_ProjectKB_Class20010])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 200)
+	(y 0))
+
+([RecomendadorApps_ProjectKB_Class20010] of  Property_List
+)
+
+([RecomendadorApps_ProjectKB_Class20011] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "recomendada_a")
+	(property_list [RecomendadorApps_ProjectKB_Class20012])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([RecomendadorApps_ProjectKB_Class20012] of  Property_List
+
+	(properties
+		[RecomendadorApps_ProjectKB_Class20013]
+		[RecomendadorApps_ProjectKB_Class20014]))
+
+([RecomendadorApps_ProjectKB_Class20013] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([RecomendadorApps_ProjectKB_Class20014] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([RecomendadorApps_ProjectKB_Class20015] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "app_recomendada")
+	(property_list [RecomendadorApps_ProjectKB_Class20016])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([RecomendadorApps_ProjectKB_Class20016] of  Property_List
+
+	(properties
+		[RecomendadorApps_ProjectKB_Class20017]
+		[RecomendadorApps_ProjectKB_Class20018]))
+
+([RecomendadorApps_ProjectKB_Class20017] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([RecomendadorApps_ProjectKB_Class20018] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
 ([RecomendadorApps_ProjectKB_Class20023] of  Widget
 
 	(height 60)
@@ -1181,33 +1271,6 @@
 ([RecomendadorApps_ProjectKB_Class30044] of  Property_List
 )
 
-([RecomendadorApps_ProjectKB_Class30045] of  Widget
-
-	(height 260)
-	(is_hidden FALSE)
-	(name "recomendaciones")
-	(property_list [RecomendadorApps_ProjectKB_Class30046])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 200)
-	(y 0))
-
-([RecomendadorApps_ProjectKB_Class30046] of  Property_List
-
-	(properties
-		[RecomendadorApps_ProjectKB_Class30047]
-		[RecomendadorApps_ProjectKB_Class30048]))
-
-([RecomendadorApps_ProjectKB_Class30047] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([RecomendadorApps_ProjectKB_Class30048] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
 ([RecomendadorApps_ProjectKB_Class30049] of  Widget
 
 	(height 60)
@@ -1236,26 +1299,6 @@
 ([RecomendadorApps_ProjectKB_Class30052] of  Property_List
 )
 
-([RecomendadorApps_ProjectKB_Class30160] of  Property_List
-)
-
-([RecomendadorApps_ProjectKB_Class30161] of  Property_List
-)
-
-([RecomendadorApps_ProjectKB_Class30162] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "recomendaciones")
-	(property_list [RecomendadorApps_ProjectKB_Class30163])
-	(widget_class_name "edu.stanford.smi.protege.widget.StringListWidget")
-	(width 200)
-	(x 0)
-	(y 260))
-
-([RecomendadorApps_ProjectKB_Class30163] of  Property_List
-)
-
 ([RecomendadorApps_ProjectKB_Class30164] of  Widget
 
 	(height 260)
@@ -1282,87 +1325,6 @@
 
 	(boolean_value FALSE)
 	(name "ButtonDisplayed-Delete Instance"))
-
-([RecomendadorApps_ProjectKB_Class30168] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([RecomendadorApps_ProjectKB_Class30169] of  String
-
-	(name "Usuario")
-	(string_value "Nombre"))
-
-([RecomendadorApps_ProjectKB_Class30170] of  String
-
-	(name ":RULE")
-	(string_value "%3ADEFINITION-NAME"))
-
-([RecomendadorApps_ProjectKB_Class30171] of  String
-
-	(name ":FUNCTION")
-	(string_value "%3ADEFINITION-NAME"))
-
-([RecomendadorApps_ProjectKB_Class30172] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([RecomendadorApps_ProjectKB_Class30173] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([RecomendadorApps_ProjectKB_Class30174] of  String
-
-	(name "freemium")
-	(string_value "Nombre"))
-
-([RecomendadorApps_ProjectKB_Class30175] of  String
-
-	(name "App")
-	(string_value "Nombre"))
-
-([RecomendadorApps_ProjectKB_Class30176] of  String
-
-	(name "Desarrollador")
-	(string_value "Nombre"))
-
-([RecomendadorApps_ProjectKB_Class30177] of  String
-
-	(name ":JESS-DEFINITION")
-	(string_value "%3ADEFINITION-NAME"))
-
-([RecomendadorApps_ProjectKB_Class30178] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([RecomendadorApps_ProjectKB_Class30179] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([RecomendadorApps_ProjectKB_Class30180] of  Map
-)
-
-([RecomendadorApps_ProjectKB_Class30181] of  Map_Entry
-
-	(key "InstanceDisplay.yellow_stickies")
-	(key_class "java.lang.String")
-	(value "RecomendadorApps_ProjectKB_Class30180")
-	(value_class "java.util.Map"))
-
-([RecomendadorApps_ProjectKB_Class30182] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
 
 ([RecomendadorApps_ProjectKB_Class31] of  Widget
 
@@ -1410,6 +1372,20 @@
 )
 
 ([RecomendadorApps_ProjectKB_Class40] of  Property_List
+)
+
+([RecomendadorApps_ProjectKB_Class40058] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Categorias")
+	(property_list [RecomendadorApps_ProjectKB_Class40059])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 0)
+	(y 260))
+
+([RecomendadorApps_ProjectKB_Class40059] of  Property_List
 )
 
 ([RecomendadorApps_ProjectKB_Class41] of  Widget
@@ -1483,6 +1459,92 @@
 
 ([RecomendadorApps_ProjectKB_Class50] of  Property_List
 )
+
+([RecomendadorApps_ProjectKB_Class50114] of  String
+
+	(name "Recomendacion")
+	(string_value "app_recomendada{+-+}recomendada_a{+-+}afinidad"))
+
+([RecomendadorApps_ProjectKB_Class50115] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([RecomendadorApps_ProjectKB_Class50116] of  String
+
+	(name "Usuario")
+	(string_value "Nombre"))
+
+([RecomendadorApps_ProjectKB_Class50117] of  String
+
+	(name ":FUNCTION")
+	(string_value "%3ADEFINITION-NAME"))
+
+([RecomendadorApps_ProjectKB_Class50118] of  String
+
+	(name ":RULE")
+	(string_value "%3ADEFINITION-NAME"))
+
+([RecomendadorApps_ProjectKB_Class50119] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([RecomendadorApps_ProjectKB_Class50120] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([RecomendadorApps_ProjectKB_Class50121] of  String
+
+	(name "freemium")
+	(string_value "Nombre"))
+
+([RecomendadorApps_ProjectKB_Class50122] of  String
+
+	(name "Desarrollador")
+	(string_value "Nombre"))
+
+([RecomendadorApps_ProjectKB_Class50123] of  String
+
+	(name "App")
+	(string_value "Nombre"))
+
+([RecomendadorApps_ProjectKB_Class50124] of  String
+
+	(name ":JESS-DEFINITION")
+	(string_value "%3ADEFINITION-NAME"))
+
+([RecomendadorApps_ProjectKB_Class50125] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([RecomendadorApps_ProjectKB_Class50126] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([RecomendadorApps_ProjectKB_Class50127] of  Map
+)
+
+([RecomendadorApps_ProjectKB_Class50128] of  Map_Entry
+
+	(key "InstanceDisplay.yellow_stickies")
+	(key_class "java.lang.String")
+	(value "RecomendadorApps_ProjectKB_Class50127")
+	(value_class "java.util.Map"))
+
+([RecomendadorApps_ProjectKB_Class50129] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
 
 ([RecomendadorApps_ProjectKB_Class51] of  Widget
 

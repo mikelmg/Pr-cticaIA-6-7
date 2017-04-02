@@ -1,4 +1,4 @@
-; Sun Apr 02 20:21:53 CEST 2017
+; Mon Apr 03 00:30:48 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -8,7 +8,8 @@
 
 ([RecomendadorApps_Class0] of  Usuario
 
-	(Edad 14)
+	(Categorias musica)
+	(Edad 24)
 	(Genero Mujer)
 	(Nacionalidad "es")
 	(Nombre "Pepa")
@@ -16,10 +17,27 @@
 
 ([RecomendadorApps_Class158] of  Usuario
 
-	(Edad 44)
+	(Categorias social)
+	(Edad 30)
 	(Genero Hombre)
 	(Nacionalidad "es")
 	(Nombre "Manolo")
+	(Sistema_operativo Android))
+
+([RecomendadorApps_Class21264] of  Desarrollador
+
+	(Apps [RecomendadorApps_Class21265])
+	(Nombre "Twitter Inc"))
+
+([RecomendadorApps_Class21265] of  gratis
+
+	(Categorias social)
+	(desarrollador [RecomendadorApps_Class21264])
+	(descargas 5953200)
+	(edad_recomendada 25)
+	(Nombre "Twitter")
+	(Precio 0.0)
+	(Puntuacion 3.0)
 	(Sistema_operativo iOS))
 
 ([RecomendadorApps_Class304] of  freemium
