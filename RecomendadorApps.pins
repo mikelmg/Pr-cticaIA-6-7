@@ -1,10 +1,26 @@
-; Sat Apr 01 14:12:54 CDT 2017
+; Sun Apr 02 20:21:53 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
 ([Jess+engine] of  %3AJESS-ENGINE
 )
+
+([RecomendadorApps_Class0] of  Usuario
+
+	(Edad 14)
+	(Genero Mujer)
+	(Nacionalidad "es")
+	(Nombre "Pepa")
+	(Sistema_operativo iOS))
+
+([RecomendadorApps_Class158] of  Usuario
+
+	(Edad 44)
+	(Genero Hombre)
+	(Nacionalidad "es")
+	(Nombre "Manolo")
+	(Sistema_operativo iOS))
 
 ([RecomendadorApps_Class304] of  freemium
 
@@ -153,14 +169,6 @@
 	(Nombre "Instagram")
 	(Precio 0.0)
 	(Puntuacion 4.0)
-	(Sistema_operativo Android))
-
-([RecomendadorApps_Class30884] of  Usuario
-
-	(Edad 42)
-	(Genero Hombre)
-	(Nacionalidad "es")
-	(Nombre "Manolo")
 	(Sistema_operativo Android))
 
 ([RecomendadorApps_Class309] of  gratis

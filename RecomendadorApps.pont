@@ -1,4 +1,4 @@
-; Sat Apr 01 14:12:54 CDT 2017
+; Sun Apr 02 20:21:53 CEST 2017
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,24 +11,24 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot Categorias
-		(type SYMBOL)
-		(allowed-values musica viajes productividad social juegos noticias compras video)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
 	(single-slot edad_recomendada
 		(type INTEGER)
 		(range 0 %3FVARIABLE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot %3ADEFINITION-NAME
-		(type STRING)
-;+		(cardinality 0 1)
+	(multislot Categorias
+		(type SYMBOL)
+		(allowed-values musica viajes productividad social juegos noticias compras video)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot Edad
 		(type INTEGER)
 		(range 0 %3FVARIABLE)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3AKB-SAVE
 		(type SYMBOL)
@@ -62,7 +62,7 @@
 		(create-accessor read-write))
 	(multislot recomendaciones
 		(type INSTANCE)
-;+		(allowed-classes App freemium gratis pago suscripcion)
+;+		(allowed-classes App)
 		(create-accessor read-write))
 	(single-slot Genero
 		(type SYMBOL)
@@ -75,15 +75,15 @@
 ;+		(cardinality 1 1)
 ;+		(inverse-slot Apps)
 		(create-accessor read-write))
-	(single-slot %3ADEFINITION
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot Puntuacion
 		(type FLOAT)
 		(range 0.0 5.0)
 		(default 2.5)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot descargas
 		(type INTEGER)
@@ -203,30 +203,30 @@
 (defclass App
 	(is-a USER)
 	(role abstract)
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot Precio
 		(type FLOAT)
 		(range 0.0 %3FVARIABLE)
 		(default 0.0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Nombre
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(multislot Categorias
-		(type SYMBOL)
-		(allowed-values musica viajes productividad social juegos noticias compras video)
-		(cardinality 1 ?VARIABLE)
+	(single-slot edad_recomendada
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot Sistema_operativo
 		(type SYMBOL)
 		(allowed-values iOS Android)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot edad_recomendada
-		(type INTEGER)
-		(range 0 %3FVARIABLE)
-;+		(cardinality 0 1)
+	(multislot Categorias
+		(type SYMBOL)
+		(allowed-values musica viajes productividad social juegos noticias compras video)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot descargas
 		(type INTEGER)
@@ -305,19 +305,19 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Edad
-		(type INTEGER)
-		(range 0 %3FVARIABLE)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(multislot Sistema_operativo
 		(type SYMBOL)
 		(allowed-values iOS Android)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
+	(single-slot Edad
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(multislot recomendaciones
 		(type INSTANCE)
-;+		(allowed-classes App freemium gratis pago suscripcion)
+;+		(allowed-classes App)
 		(create-accessor read-write))
 	(single-slot Genero
 		(type SYMBOL)

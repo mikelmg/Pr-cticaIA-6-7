@@ -63,9 +63,9 @@
 		(Nacionalidad ?nacionalidad)
 		(Sistema_operativo ?so))
 	?app <- (object (is-a ?profit)(Nombre ?appname)(Sistema_operativo ?so))
-	(not (done app_recommended ?appname))
+	(not (done app_recommended ?nombre ?appname))
 	=>
-	(assert (done app_recommended ?appname))
+	(assert (done app_recommended ?nombre ?appname))
 	(slot-insert$ ?usuario recomendaciones 1 ?app))
 
 (reset)
