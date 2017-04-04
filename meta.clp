@@ -62,9 +62,9 @@
 ; Covierte las afinidades Jess en Recomendaciones Protégé
 (defrule convertir-afinidad
 	(afinidad (sujeto ?nombre)(interes ?appname)(valor ?afinidad))
-	(object (OBJECT ?usuario)(is-a Usuario)(Nombre ?nombre))
+	(object (OBJECT ?usuario)(is-a Usuario)(Nombre ?nombre)(Sistema_operativo ?so))
 	(app (id ?appname)(profit ?profit))
-	(object (OBJECT ?app)(is-a ?profit)(Nombre ?appname))
+	(object (OBJECT ?app)(is-a ?profit)(Nombre ?appname)(Sistema_operativo ?so))
 	(not (object (is-a Recomendacion)(app_recomendada ?app)(recomendada_a ?usuario)))
 	(test (> ?afinidad 0))
 	=>
